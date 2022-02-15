@@ -68,9 +68,9 @@ file = None
 text.pack(expand = True, fill=BOTH)
 
 # MenuBar
-menu_ = Menu(root)
+menu_ = Menu(root, background = 'blue', fg = "blue")
 # File Menu 
-file = Menu(menu_, tearoff = 0)
+file = Menu(menu_)
 file.add_command(label = "New", command = NewFile) # create a new file
 file.add_command(label =  "Open",command = OpenFile) #open a new file
 file.add_command(label = "Save", command = SaveFile) # save a file
@@ -78,13 +78,13 @@ file.add_separator()
 file.add_command(label = "Exit", command  = exitFile) #exit file
 menu_.add_cascade(label = "File", menu = file)
 #Edit Menu
-edit = Menu(menu_, tearoff = 0)
+edit = Menu(menu_)
 edit.add_command(label = "Cut", command = cutText)
 edit.add_command(label = "Copy", command = copyText)
 edit.add_command(label = "Paste", command = pasteText)
 menu_.add_cascade(label = "Edit", menu = edit)
 # Help Menu
-help=Menu(menu_, tearoff =  0)
+help=Menu(menu_)
 help.add_command(label = "About Notepad", command = about)
 menu_.add_cascade(label = "About", menu = help)
 
